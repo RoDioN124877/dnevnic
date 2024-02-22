@@ -10,6 +10,30 @@ export const useUsersStore = defineStore('usersStore', () => {
             patronymic: 'Evgenivich',
             role: 'student',
             date: '2006-12-12'
+        },
+        {
+            id: 1,
+            name: 'Temerlan',
+            surname: 'Maximov',
+            patronymic: 'aaa',
+            role: 'teacher',
+            date: '1990-11-1'
+        },
+    ]
+    )
+
+    const lessons = ref([
+        {
+            id: 0,
+            title: 'vue lesson 8',
+            teacher: {
+                userId: 1,
+            },
+            date: '2024-02-25',
+            description: "",
+            students: {
+                userId: 0,
+            }
         }])
-    return { users }
+    return { users, lessons }
 })

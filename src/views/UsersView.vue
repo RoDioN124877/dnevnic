@@ -5,7 +5,8 @@
         <li v-for="userData in usersStore.users" :key="userData.id">
           <router-link :to="{
             name: 'user', params: {
-              id: `${userData.name} ${userData.surname}`,
+              id: userData.id,
+              name: userData.name
 
             }
           }">{{ userData.name }}

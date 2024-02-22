@@ -16,16 +16,34 @@ const router = createRouter({
 
         },
         {
-          path: 'users/:id',
+          path: 'users/:id-:name',
           name: 'user',
           props: true,
           component: () => import('@/views/UserView.vue'),
         },
         {
-          path: 'tasks',
-          name: 'tasks',
+          path: 'users/add',
+          name: 'userAdd',
+          props: true,
+          component: () => import('@/views/UserAddView.vue'),
+        },
+        {
+          path: 'lessons',
+          name: 'lessons',
           props: true,
           component: () => import('@/views/TasksView.vue')
+        },
+        {
+          path: 'lesson:id-:title',
+          name: 'lesson',
+          props: true,
+          component: () => import('@/views/LessonView.vue')
+        },
+        {
+          path: 'lesson/add',
+          name: 'lessonAdd',
+          props: true,
+          component: () => import('@/views/LessonAddView.vue'),
         },
       ]
     },
